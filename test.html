@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="stage2.css" />
+    <script defer src="stage1.js"></script>
+    <script defer src="stage2.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <title>New</title>
+  </head>
+  <body>
+    <div class="herobox">
+      <img
+        src="knowledge-book-make-perfect-vector-illustration_215372-1196.jpg"
+      />
+    </div>
+    <div class="beforetest">
+      <h2>You Need To Know And Follow This Assumptions.</h2>
+      <h4>
+        No.1 This Test Is Complex And Hard So, I Recommend To You Sit On
+        Comfortable And Undistracted Place.
+      </h4>
+      <h4>No.2 This Test Is Different From Others Test.</h4>
+      <h4>No.3 Do Not Used Reference And Help From Others.</h4>
+      <h4>No.4 There Are One and Two Stage.</h4>
+      <button id="nextbutton">Next</button>
+    </div>
+    <div class="gamemodecontainer">
+      <a id="backtoHome" href="index.html">Home</a>
+      <h2 id="gamestage">First Stage</h2>
+      <div class="pagination">
+        <div class="staeg1"></div>
+        <div class="staeg2"></div>
+      </div>
+      <h3 id="questions">In descending Order</h3>
+      <div class="gamebox">
+        <div class="schutlebox"></div>
+        <img width="100%" src="Polish_20231109_105703637.jpg" />
+      </div>
+      <button id="next">Next</button>
+    </div>
+    <div class="blurbox"></div>
+    <div class="characterintobox">
+      <h3 id="cheterspeech"></h3>
+    </div>
+    <div class="certificatebox"></div>
+    <img id="charcter" height="40%" src="Polish_20231108_130904771.png" />
+    <audio
+      src="Naruto Shippuden OST III - Obito's Theme (HQ)_1.mp3"
+      id="charactervoice"
+    ></audio>
+  </body>
+  <script>
+    let storagebox = JSON.parse(localStorage.getItem("alldata")) || [];
+    if (storagebox.length == 0) {
+      var typed = new Typed("#cheterspeech", {
+        strings: [
+          "Welcome To Your First Stage IQ Test.My Name Is Tobihara And Your Helper.",
+          "In This First Stage You Have To Solve Table In Ascending And Descending Order.",
+        ],
+        typeSpeed: 65,
+        startDelay: 300,
+        backDelay: 700,
+      });
+    }
+    if (storagebox.length !== 0) {
+      if (storagebox[0].stage1 == "successful" && storagebox[0].stage2 == "") {
+        var typed = new Typed("#cheterspeech", {
+          strings: [
+            "Congratulations, Welcome To Your Second Stage  😀. ",
+            "Now You Have 3 Questions And You Have To Give Correct Answer. Thank You.",
+          ],
+          typeSpeed: 65,
+          startDelay: 300,
+          backDelay: 700,
+        });
+      }
+    }
+    if (storagebox.length !== 0) {
+      if (
+        storagebox[0].stage1 == "successful" &&
+        storagebox[0].stage2 == "successful"
+      ) {
+        var typed = new Typed("#cheterspeech", {
+          strings: [
+            "Congratulations, You Complete Your First And Second Stage. ",
+            "Now Your Certificate Is Ready.",
+          ],
+          typeSpeed: 65,
+          startDelay: 300,
+          backDelay: 700,
+        });
+      }
+    }
+    
+  </script>
+</html>

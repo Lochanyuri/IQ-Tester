@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Mono:ital,wght@1,600&display=swap");
+html,
+body {
+  margin: 0px;
+  width: 0px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #080309;
+}
+.herobox {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.herobox img {
+  width: 100%;
+  height: 100%;
+  animation: imganimation 6s linear infinite;
+}
+@keyframes imganimation {
+  0% {
+    transform: translateY-(25px);
+  }
+  60% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+.beforetest {
+  width: 90vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+
+  margin: 5px auto;
+  padding: 10px 0px 0px 10px;
+}
+.beforetest h2,
+h4 {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: Sans-Serif;
+}
+.beforetest h2 {
+  text-align: center;
+}
+.beforetest h4 {
+  font-weight: 400;
+}
+#nextbutton {
+  width: 60%;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.gamemodecontainer {
+  height: 70vh;
+  width: 100vw;
+
+  margin: 10vh auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.gamemodecontainer #gamestage {
+  color: white;
+  font-family: Sans-Serif;
+}
+.gamemodecontainer .pagination {
+  height: 3vh;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.gamebox {
+  height: 50%;
+  width: 80%;
+  /* background: pink; */
+  overflow: hidden;
+}
+.gamemodecontainer h2,
+h3 {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+.schutlebox {
+  border: 1px solid blue;
+  /* background: purple; */
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.schutlebox button {
+  border: 1px solid blue;
+  font-size: 17px;
+}
+#next {
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
+.characterintobox {
+  height: 10vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: 1.5s;
+}
+.characterintobox h3 {
+  color: black;
+  width: 80%;
+  height: 50%;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: Sans-Serif;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.characterintobox h3::first-letter {
+  font-size: 21px;
+  font-weight: 300;
+}
+#charcter {
+  /* border: 1px solid red; */
+  position: fixed;
+  bottom: 68px;
+  right: -100%;
+  transition: 0.5s;
+  z-index: 50;
+}
+.blurbox {
+  height: 100vh;
+  width: 100vw;
+  background: #0000007b;
+  display: none;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+}
+.pagination div {
+  height: 20%;
+  width: 30%;
+  background: white;
+}
+.pagination .staeg1 {
+  background: #11f011;
+}
+.schutlebox h3 {
+  font-family: Sans-Serif;
+  font-weight: 400;
+  width: 90%;
+}
+.schutlebox div {
+  height: 60%;
+  width: 80%;
+  margin-top: 5%;
+  background: blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#next a {
+  width: 100%;
+  height: 100%;
+}
+#backtoHome {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid white;
+}
